@@ -1,14 +1,13 @@
 body {
-  background-color: #f7f3eb;
-  font-family: "Arial", sans-serif;
+  background-color: #eef1ff;
+  font-family: Arial, sans-serif;
   color: #111;
 }
 
 button.btn-dark {
-  background-color: #1f2a44;
+  background-color: #ff595e;
   border: 4px solid #000;
   box-shadow: 4px 4px 0 #000;
-  font-size: 1.4rem;
 }
 
 button.btn-dark:hover {
@@ -17,40 +16,39 @@ button.btn-dark:hover {
 }
 
 .offcanvas {
-  background-color: #ffcc00;
+  background-color: #8ac926;
   border-left: 6px solid #000;
 }
 
-.offcanvas-title {
-  font-weight: 800;
-}
-
 .nav-link {
-  font-size: 1.2rem;
   font-weight: bold;
+  font-size: 1.15rem;
   color: #000;
-  margin-bottom: 1rem;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-h2 {
-  border: 4px solid #000;
-  box-shadow: 6px 6px 0 #000;
-  background-color: #ffffff;
+p {
+  font-weight: 600;
 }
 
 .bg-light {
   background-color: #ffffff !important;
   border: 4px solid #000;
-  box-shadow: 6px 6px 0 #000;
+  box-shadow: 8px 8px 0 #000;
+}
+
+h5 {
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 img {
   border: 4px solid #000;
   box-shadow: 5px 5px 0 #000;
+}
+
+img {
+  max-width: 120px;
+  height: auto;
   max-width: 120px;
   height: auto;
 }
