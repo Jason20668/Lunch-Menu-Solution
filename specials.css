@@ -1,11 +1,11 @@
 body {
-  background-color: #fff3f3;
+  background-color: #eef1ff;
   font-family: Arial, sans-serif;
   color: #111;
 }
 
 button.btn-dark {
-  background-color: #1982c4;
+  background-color: #ff595e;
   border: 4px solid #000;
   box-shadow: 4px 4px 0 #000;
 }
@@ -16,33 +16,39 @@ button.btn-dark:hover {
 }
 
 .offcanvas {
-  background-color: #ffca3a;
+  background-color: #8ac926;
   border-left: 6px solid #000;
 }
 
 .nav-link {
-  font-size: 1.2rem;
   font-weight: bold;
+  font-size: 1.15rem;
   color: #000;
+}
+
+p {
+  font-weight: 600;
 }
 
 .bg-light {
   background-color: #ffffff !important;
   border: 4px solid #000;
   box-shadow: 8px 8px 0 #000;
-  font-size: 1.3rem;
-  font-weight: 800;
-  text-transform: uppercase;
 }
 
-.bg-light:hover {
-  background-color: #ffca3a !important;
-  cursor: pointer;
+h5 {
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 img {
   border: 4px solid #000;
   box-shadow: 5px 5px 0 #000;
+}
+
+img {
+  max-width: 120px;
+  height: auto;
   max-width: 120px;
   height: auto;
 }
