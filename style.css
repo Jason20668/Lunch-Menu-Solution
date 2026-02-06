@@ -1,7 +1,8 @@
 body {
   background-color: #f7f3eb;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial Black", Impact, system-ui, sans-serif;
   color: #111;
+  font-weight: 800;
 }
 
 button.btn-dark {

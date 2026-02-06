@@ -1,12 +1,3 @@
-const vue_app = Vue.createApp({
-      created() {
-            fetch('json.json').then(response => response.json()).then(json => {
-                  this.json = json
-            })
-      }
-})
-
-vue_app.mount("#vue_app")
 
 /*
 Student Lunch = 4.25;
@@ -23,56 +14,39 @@ Water = 1.75;
 Vitaminwater and Kickstart = 2.85;
 Soda = 2.60;
 */
-let total = 0;
 
-function studentLunch() {
-      total += 4.25;
-}
+// Price Calculator
+(function(){
+  const format = v => '$' + v.toFixed(2);
+  const menuItems = document.querySelectorAll('.menu-item');
+  
+  function updateTotal(){
+    let total = 0;
+    menuItems.forEach(item => {
+      const price = parseFloat(item.dataset.price) || 0;
+      const qty = parseInt(item.querySelector('.qty').textContent, 10) || 0;
+      total += price * qty;
+    });
+    document.getElementById('totalPrice').textContent = format(total);
+  }
 
-function Salad() {
-      total += 4.50;
-}
+  document.getElementById('menuList').addEventListener('click', function(e){
+    if(e.target.classList.contains('btn-add') || e.target.classList.contains('btn-remove')){
+      const item = e.target.closest('.menu-item');
+      const qtyEl = item.querySelector('.qty');
+      let qty = parseInt(qtyEl.textContent, 10) || 0;
+      if(e.target.classList.contains('btn-add')) qty++;
+      if(e.target.classList.contains('btn-remove')) qty = Math.max(0, qty-1);
+      qtyEl.textContent = qty;
+      updateTotal();
+    }
+  });
 
-function themeLunch() {
-      total += 5.25;
-}
+  document.getElementById('clearBtn').addEventListener('click', function(){
+    menuItems.forEach(i => i.querySelector('.qty').textContent = '0');
+    updateTotal();
+  });
 
-function reducedLunch() {
-      total += 0;
-}
-
-function pizzaSlice() {
-      total += 3.25;
-}
-
-function Uncrustable() {
-      total += 3.50;
-}
-
-function Dressing() {
-      total += 1.00;
-}
-
-function Fruit() {
-      total += 2.65;
-}
-
-function Fries() {
-      total += 2.65;
-}
-
-function Chips() {
-      total += 1.80;
-}
-
-function Water() {
-      total += 1.75;
-}
-
-function Kickstart() {
-      total += 2.85;
-}
-
-function Soda() {
-      total += 2.60;
-}
+  // initial calculate
+  updateTotal();
+})();

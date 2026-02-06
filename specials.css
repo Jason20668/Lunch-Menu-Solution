@@ -1,7 +1,7 @@
 body {
-  background-color: #f7f3eb;
-  font-family: "Arial", sans-serif;
-  color: #111;
+  background-color: #f4efe4;
+  font-family: "Arial Black", Impact, system-ui, sans-serif;
+  color: #000;
 }
 
 button.btn-dark {
@@ -18,39 +18,100 @@ button.btn-dark:hover {
 
 .offcanvas {
   background-color: #ffcc00;
-  border-left: 6px solid #000;
+  border-left: 8px solid #000;
 }
 
 .offcanvas-title {
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .nav-link {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 900;
   color: #000;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .nav-link:hover {
   text-decoration: underline;
 }
 
-h2 {
-  border: 4px solid #000;
-  box-shadow: 6px 6px 0 #000;
-  background-color: #ffffff;
-}
-
-.bg-light {
-  background-color: #ffffff !important;
-  border: 4px solid #000;
-  box-shadow: 6px 6px 0 #000;
+.text-center h4 {
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 img {
-  border: 4px solid #000;
-  box-shadow: 5px 5px 0 #000;
-  max-width: 200px;
+  border: 5px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  max-width: 180px;
   height: auto;
+  background-color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  border: 5px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  border-radius: 0;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 14px 14px 0 #000;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.card-title span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.card-text strong {
+  font-weight: 900;
+}
+
+.card hr {
+  border: 3px solid #000;
+  opacity: 1;
+}
+
+.card-text.text-muted {
+  font-size: 0.9rem;
+  color: #000 !important;
+  font-weight: 700;
+}
+
+#vue_app .row {
+  justify-content: center;
+}
+
+#vue_app .row > div {
+  max-width: 360px;
+}
+
+@media (max-width: 768px) {
+  button.btn-dark {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    box-shadow: 8px 8px 0 #000;
+  }
 }

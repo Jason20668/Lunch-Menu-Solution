@@ -40,25 +40,37 @@
 
 
     <div id="vue_app" class="container">
-      <div class="main rounded">
-        <div class="row">
-          <div class="col-md-4" v-for="" :key="index">
-              <p class="dateDay"></p>
-              <p class="food"></p>
-              <p class="price"></p>
-              <p class="fats"></p>
-              <p class="cholesterol"></p>
-              <p class="sodium"></p>
-              <p class="carbs"></p>
-              <p class="fiber"></p>
-              <p class="sugar"></p>
-              <p class="vitamins"></p>
-              </div>
+      <div class="row g-4">
+        <div class="col-md-4" v-for="(special, index) in specials" :key="index">
+          <div class="card h-100 p-4 rounded">
+            <div class="card-body">
+              <h5 class="card-title">{{ special.day }}
+                <span v-if="special.date" class="text-muted" style="font-size: 0.9rem;"> - {{ special.date }}</span>
+              </h5>
+              <p class="card-text"><strong>{{ special.food }}</strong></p>
+              <p class="card-text"><strong>Price:</strong> ${{ special.price }}</p>
+              <hr>
+              <p class="card-text"><strong>Calories:</strong> {{ special.calories }}</p>
+              <p class="card-text"><strong>Fat:</strong> {{ special.fat }}g</p>
+              <p class="card-text"><strong>Cholesterol:</strong> {{ special.cholesterol }}mg</p>
+              <p class="card-text"><strong>Sodium:</strong> {{ special.sodium }}mg</p>
+              <p class="card-text"><strong>Carbs:</strong> {{ special.carbohydrates }}g</p>
+              <p class="card-text"><strong>Fiber:</strong> {{ special.fiber }}g</p>
+              <p class="card-text"><strong>Sugars:</strong> {{ special.sugars }}g</p>
+              <p class="card-text"><strong>Protein:</strong> {{ special.protein }}g</p>
+              <hr>
+              <p class="card-text"><strong>Vitamins & Minerals:</strong></p>
+              <p class="card-text text-muted">Vitamin A: {{ special.VitaminA }} | Vitamin C: {{ special.VitaminC }}</p>
+              <p class="card-text text-muted">Iron: {{ special.Iron }}mg | Calcium: {{ special.Calcium }}mg</p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script src="specials.js"></script>
 </body>
 
 </html>
